@@ -1,0 +1,40 @@
+/* Minimal Glass Card Styles */
+.card {
+  border-radius: 22px;
+  background: var(--surface);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.page.theme-dark .card {
+  background: var(--surface-dark);
+}
+.page.theme-light .card {
+  background: var(--surface-light);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.clip {
+  border-radius: inherit;
+  overflow: hidden;
+  padding: 18px 18px 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

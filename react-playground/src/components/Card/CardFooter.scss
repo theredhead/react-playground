@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 10px;
+  box-shadow: none;
+}
+.page.theme-dark .footer {
+  color: var(--darkmode-text);
+  box-shadow: none;
+}
+.page.theme-light .footer {
+  color: var(--lightmode-text);
+  box-shadow: none;
+}
