@@ -7,10 +7,6 @@
   --blur: 18px;
   --surface-alpha: 0.14;
   --surface: rgba(255, 255, 255, var(--surface-alpha));
-  --surface-dark: rgba(36, 36, 36, var(--surface-alpha));
-  --surface-light: rgba(255, 255, 255, var(--surface-alpha));
-  --darkmode-text: white;
-  --lightmode-text: black;
 
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -27,7 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+div, article, section, main, header, footer, nav, aside {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

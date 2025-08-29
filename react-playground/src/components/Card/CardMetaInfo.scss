@@ -14,21 +14,11 @@
 .k {
   font-size: 11px;
 }
-.page.theme-dark .k {
-  color: #aaa;
-}
-.page.theme-light .k {
-  color: #888;
+.k {
+  font-size: 11px;
 }
 .v {
-  color: var(text-darkmode);
   font-weight: 500;
   margin-top: 2px;
   flex: 1 1 auto;
-}
-.page.theme-dark .v {
-  color: var(text-darkmode);
-}
-.page.theme-light .v {
-  color: var(text-lightmode);
 }

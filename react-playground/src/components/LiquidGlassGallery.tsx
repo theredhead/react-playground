@@ -4,7 +4,7 @@ import {
   StarWarsCharacterCard,
   type CardData,
 } from "./StarWarsCharacterCard/StarWarsCharacterCard";
-import "./liquidglassgallery.component.scss";
+import "./LiquidGlassGallery.scss";
 
 export interface GalleryProps {
   data: CardData[];
@@ -14,7 +14,6 @@ export function LiquidGlassGallery({ data }: GalleryProps) {
   const [q, setQ] = useState("");
   const eras = Array.from(new Set(data.map(eraCategory)));
   const [era, setEra] = useState<string>("All");
-  const [theme, setTheme] = useState<"liquid" | "dark" | "light">("liquid");
 
   const filtered = data
     .filter((d) => matchesQuery(d, q))
@@ -27,20 +26,11 @@ export function LiquidGlassGallery({ data }: GalleryProps) {
   const orderedGroups = Object.keys(groups).sort((a, b) => a.localeCompare(b));
 
   return (
-    <div className={`page theme-${theme}`}>
+    <div className="page">
       <div className="wrap">
         <header className="site">
-          <div className="dot" />
           <div>
             <h1>Liquid Glass Cards — Star Wars</h1>
-            <p>
-              {theme === "liquid"
-                ? "Liquid glass mode"
-                : theme === "dark"
-                ? "Dark mode"
-                : "Light mode"}{" "}
-              active.
-            </p>
           </div>
           <div className="filters">
             <input
@@ -60,16 +50,6 @@ export function LiquidGlassGallery({ data }: GalleryProps) {
               {eras.map((e) => (
                 <option key={e}>{e}</option>
               ))}
-            </select>
-            <select
-              className="select"
-              value={theme}
-              onChange={(e) => setTheme(e.target.value as any)}
-              aria-label="Theme"
-            >
-              <option value="liquid">Liquid glass</option>
-              <option value="dark">Dark</option>
-              <option value="light">Light</option>
             </select>
           </div>
         </header>

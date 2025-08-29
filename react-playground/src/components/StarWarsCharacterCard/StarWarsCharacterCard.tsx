@@ -1,3 +1,4 @@
+import { Avatar } from "../Avatar/Avatar";
 import { Button } from "../Button/Button";
 import { Card } from "../Card/Card";
 import type { CardHeaderProps } from "../Card/CardHeader";
@@ -25,7 +26,7 @@ export const StarWarsCharacterCard = ({ data }: { data: CardData }) => {
     ["--signal" as any]: String(data.signal),
   };
   const header: CardHeaderProps = {
-    avatar: <div className={"avatar " + data.avatar} />,
+    avatar: <Avatar name={data.title} size={48} />,
     title: data.title,
     subtitle: data.subtitle,
   };

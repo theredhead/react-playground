@@ -9,7 +9,7 @@ import type { CardFooterProps } from "./CardFooter";
 import { CardMetaInfo } from "./CardMetaInfo";
 import type { CardMetaInfoProps } from "./CardMetaInfo";
 
-import "./Card.scss";
+import styles from "./Card.module.scss";
 
 export interface CardProps {
   style?: CSSProperties;
@@ -27,14 +27,16 @@ export const Card: React.FC<CardProps> = ({
   footer,
   meta,
   chips,
-}) => (
-  <article className="card" style={style}>
-    <div className="clip">
-      <CardHeader {...header} />
-      {chips}
-      {meta && <CardMetaInfo {...meta} />}
-      {body && <CardBody {...body} />}
-      {footer && <CardFooter {...footer} />}
-    </div>
-  </article>
-);
+}) => {
+  return (
+    <article className={styles.card} style={style}>
+      <div className={styles.clip}>
+        <CardHeader {...header} />
+        {chips}
+        {meta && <CardMetaInfo {...meta} />}
+        {body && <CardBody {...body} />}
+        {footer && <CardFooter {...footer} />}
+      </div>
+    </article>
+  );
+};

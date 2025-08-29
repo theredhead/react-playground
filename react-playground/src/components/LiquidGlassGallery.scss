@@ -1,0 +1,32 @@
+body,
+.page {
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: hsl(var(--text));
+  /* Dark, slightly textured gradient */
+  background: radial-gradient(
+      1200px 800px at 20% -10%,
+      rgba(255, 255, 255, 0.06),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at 80% 120%,
+      rgba(255, 255, 255, 0.04),
+      transparent 60%
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.02) 0 2px,
+      rgba(255, 255, 255, 0) 2px 4px
+    ),
+    linear-gradient(180deg, #0e1117 0%, #0a0f14 50%, #080c10 100%);
+  background-blend-mode: screen, screen, normal, normal;
+  background-attachment: fixed, fixed, fixed, fixed;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 10px;
+  }
+}
