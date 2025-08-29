@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./CardHeader.module.scss";
 
 export interface CardHeaderProps {
   avatar?: React.ReactNode;
@@ -11,11 +12,11 @@ export const CardHeader: React.FC<CardHeaderProps> = ({
   title,
   subtitle,
 }) => (
-  <div className="header">
-    {avatar && <div className="avatar">{avatar}</div>}
+  <div className={styles.header}>
+    {avatar && <div className={styles.avatar}>{avatar}</div>}
     <div>
-      <div className="title">{title}</div>
-      {subtitle && <div className="subtitle">{subtitle}</div>}
+      <div className={styles.title}>{title}</div>
+      {subtitle && <div className={styles.subtitle}>{subtitle}</div>}
     </div>
   </div>
 );
